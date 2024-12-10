@@ -16,8 +16,8 @@ jobs:
     - name: Set up Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '2.47.1' # Flutter এর সঠিক সংস্করণ দিন
-        channel: 'stable'         # Channel নিশ্চিত করুন
+        flutter-version: '2.47.1'
+        channel: 'stable'         
 
     - name: Install dependencies
       run: flutter pub get
