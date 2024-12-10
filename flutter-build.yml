@@ -16,8 +16,7 @@ jobs:
     - name: Set up Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.10.0' # Flutter এর সঠিক সংস্করণ দিন
-        channel: 'stable'         # Channel নিশ্চিত করুন
+        flutter-version: 'stable'
 
     - name: Install dependencies
       run: flutter pub get
@@ -28,5 +27,5 @@ jobs:
     - name: Upload APK to Artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: Flutter-APK
+        name: app-release.apk
         path: build/app/outputs/flutter-apk/app-release.apk
