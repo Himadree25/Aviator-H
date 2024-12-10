@@ -21,10 +21,10 @@ jobs:
     - name: Install dependencies
       run: flutter pub get
 
-    env:
-  ACTIONS_RUNNER_DEBUG: 'true'
+    - name: Build APK
+      run: flutter build apk --release
 
-   - name: Upload APK to Artifacts
+    - name: Upload APK to Artifacts
       uses: actions/upload-artifact@v3
       with:
         name: app-release.apk
